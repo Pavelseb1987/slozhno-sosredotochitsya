@@ -10,3 +10,16 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+:root.theme-dark {
+  --main-font: 'IBM Plex mono';
+  --text-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --bg-text-color: #FF0070;
+  --header-color: #DB00FF;
+  --header-shadow: #FF0070;
+  --shadow-color: #FF0070;
+  --title-color: #000028;
+  --transparent-accent-color: hsla(334, 100%, 50%, 0.4);
+  /* Дублируем переменные для тёмной темы */
+}
