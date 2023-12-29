@@ -5,13 +5,23 @@
 */
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --main-font: 'IBM Plex mono';
+  --text-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --bg-text-color: #FF0070;
+  --header-color: #DB00FF;
+  --header-shadow: #FF0070;
+  --shadow-color: #FF0070;
+  --title-color: #000028;
+  --transparent-accent-color: hsla(334, 100%, 50%, 0.4);
+  background-image: url(../images/cover-image-dark.png);
 }
 
-:root.theme-dark {
+.page.theme_light .lamp {
+  display: block;
+}
+
+:root.theme_dark {
   --main-font: 'IBM Plex mono';
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
@@ -23,3 +33,21 @@
   --transparent-accent-color: hsla(334, 100%, 50%, 0.4);
   /* Дублируем переменные для тёмной темы */
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font: 'IBM Plex mono';
+    --text-color: #F1B2CE;
+    --accent-color: #FF0070;
+    --bg-text-color: #FF0070;
+    --header-color: #DB00FF;
+    --header-shadow: #FF0070;
+    --shadow-color: #FF0070;
+    --title-color: #000028;  
+  }
+  
+  .page {
+    background-image: url(../images/cover-image-dark.png);
+  }
+  
+  }
