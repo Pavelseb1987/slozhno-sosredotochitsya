@@ -1,12 +1,5 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 
 .page.theme_light {
-  background-image: url(../images/cover-image-light.png);
   --header-color: #FFC2E6;
   --accent-color: #353430;
   --shadow-color: #FFC2E6;
@@ -14,7 +7,7 @@
   --bg-text-color: #FF8DCB;
   --title-color: #353430;
   --text-color: #353430;
-  --header-shadow: #FF0070;
+  background-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light .lamp {
@@ -29,8 +22,7 @@
   --transparent-accent-color: hsla(48, 5%, 20%, 0.4);
   --bg-text-color: #FF8DCB;
   --title-color: #353430;
-  --text-color: #353430;
-  --header-shadow: #FF0070;   
+  --text-color: #353430;  
 }
 
 @media (prefers-color-scheme: light) {
@@ -42,39 +34,15 @@
   --transparent-accent-color: hsla(48, 5%, 20%, 0.4);
   --bg-text-color:  #FF8DCB;
   --title-color: #353430;
-  --text-color: #353430;
-  --header-shadow: #FF0070;
-      /* Дублируем переменные светлой темы */    
+  --text-color: #353430;    
   }
 
 .page {
   background-image: url(../images/cover-image-light.png);
   }
 
-.page.theme_auto .lamp {
-  display: none;
-  }
-
 .page.theme_light .lamp {
   display: none;
   }
-
-.page.theme_dark .lamp {
-  display: block;
-  }
 }
 
-@media (prefers-color-scheme: light) and (width < 1024px) {
-.page.theme_auto .heading,
-.page.theme_light .heading {
-  text-shadow: 4px 4px 0 var(--bg-text-color);
-  }
-}
-
-@media (width < 1024px) {
-  .page.theme_light .heading,
-  .page.theme_auto .heading {
-    text-shadow: 4px 4px 0 var(--bg-text-color);
-  }
-}
-/* Остальные стили */ 

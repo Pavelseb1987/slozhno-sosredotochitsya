@@ -5,7 +5,6 @@
 */
 
 .page.theme_dark {
-  --main-font: 'IBM Plex mono';
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
   --bg-text-color: #FF0070;
@@ -15,14 +14,10 @@
   --title-color: #000028;
   --transparent-accent-color: hsla(334, 100%, 50%, 0.4);
   background-image: url(../images/cover-image-dark.png);
-}
-
-.page.theme_light .lamp {
-  display: block;
+  
 }
 
 :root.theme_dark {
-  --main-font: 'IBM Plex mono';
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
   --bg-text-color: #FF0070;
@@ -31,12 +26,20 @@
   --shadow-color: #FF0070;
   --title-color: #000028;
   --transparent-accent-color: hsla(334, 100%, 50%, 0.4);
-  /* Дублируем переменные для тёмной темы */
+}
+
+@media (prefers-color-scheme: light) {
+  .page.theme_auto .lamp {
+    display: none;
+    }
+
+  .page.theme_dark .lamp {
+    display: block;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-font: 'IBM Plex mono';
     --text-color: #F1B2CE;
     --accent-color: #FF0070;
     --bg-text-color: #FF0070;
@@ -49,5 +52,4 @@
   .page {
     background-image: url(../images/cover-image-dark.png);
   }
-  
   }
