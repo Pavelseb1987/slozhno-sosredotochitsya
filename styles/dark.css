@@ -28,16 +28,6 @@
   --transparent-accent-color: hsla(334, 100%, 50%, 0.4);
 }
 
-@media (prefers-color-scheme: light) {
-  .page.theme_auto .lamp {
-    display: none;
-    }
-
-  .page.theme_dark .lamp {
-    display: block;
-    }
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #F1B2CE;
